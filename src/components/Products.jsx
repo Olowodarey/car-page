@@ -1,10 +1,14 @@
 
-import React from "react";
-import data from "../data.json"; 
+import data from "../data.json";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
+  const navigate = useNavigate();
 
-    const limitedProducts = data.slice(0, 12);
+  const limitedProducts = data.slice(0, 12);
+  const handleSeeMoreClick = (id) => {
+    navigate(`/ProductDetails/${id}`);
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-5 lg:px-10">
@@ -13,8 +17,11 @@ const Product = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-        {limitedProducts .map((product ) => (
-          <div key={product.id} className="border-2 border-gray-500 rounded-2xl p-4">
+        {limitedProducts.map((product) => (
+          <div
+            key={product.id}
+            className="border-2 border-gray-500 rounded-2xl p-4"
+          >
             <div className="">
               <img
                 src={product.imageUrl}
@@ -26,13 +33,13 @@ const Product = () => {
             <div className="  h-[40px] ">
               <h3 className="text-sm font-semibold">{product.item}</h3>
             </div>
-           
-
-
 
             <div className="p-2  px-1 flex gap-4 justify-between items-center">
-            <p className=" p-2 text-lg text-gray-700">{product.price}</p>
-              <button className="bg-black text-white rounded-full px-2 h-6 ">
+              <p className=" p-2 text-lg text-blue-700 font-bold">{product.price}</p>
+              <button
+                onClick={() => handleSeeMoreClick(product.id)}
+                className="bg-black text-white rounded-full px-2 h-6"
+              >
                 See More
               </button>
             </div>
@@ -44,4 +51,3 @@ const Product = () => {
 };
 
 export default Product;
-

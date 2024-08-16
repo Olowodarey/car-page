@@ -143,7 +143,7 @@ const Hero = () => {
 
               <button
                 onClick={() => setShowMore(!showMore)}
-                className="lg:hidden text-blue-500 mt-1 "
+                className="hidden text-blue-500 mt-1 "
               >
                 {showMore ? "See Less" : "See More"}
               </button>

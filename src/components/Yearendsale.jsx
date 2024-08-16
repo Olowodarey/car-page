@@ -1,10 +1,20 @@
-
-import React from "react";
-import data from "../data.json"; 
+import { useNavigate } from "react-router-dom";
+import data from "../data.json";
 
 const Yearendsale = () => {
 
-    const limitedProducts = data.slice(0, 4);
+  const carProducts = data.filter(product => product.type === "car").slice(0, 1);
+  const exhaustProducts = data.filter(product => product.type === "Exhaust").slice(0, 1);
+  const intakeProducts = data.filter(product => product.type === "Intake").slice(0, 1);
+  const rimsProducts = data.filter(product => product.type === "Rim").slice(0, 1);
+
+  const limitedProducts = [...carProducts, ...exhaustProducts, ...intakeProducts , ...rimsProducts ];
+
+
+  const navigate = useNavigate();
+  const handleSeeMoreClick = (id) => {
+    navigate(`/ProductDetails/${id}`);
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-5 lg:px-10">
@@ -13,8 +23,11 @@ const Yearendsale = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-        {limitedProducts .map((product ) => (
-          <div key={product.id} className="border-2 border-gray-500 rounded-2xl p-4">
+        {limitedProducts.map((product) => (
+          <div
+            key={product.id}
+            className="border-2 border-gray-500 rounded-2xl p-4"
+          >
             <div className="">
               <img
                 src={product.imageUrl}
@@ -26,15 +39,16 @@ const Yearendsale = () => {
             <div className="  h-[40px] ">
               <h3 className="text-sm font-semibold">{product.item}</h3>
             </div>
-            <p className=" p-2 text-lg text-gray-700">{product.price}</p>
-
-
+            <p className=" p-2 text-lg text-blue-700 font-bold">{product.price}</p>
 
             <div className="p-2  px-5 flex gap-4 justify-between">
               <button className="bg-black text-white rounded-full px-3 ">
                 Cart
               </button>
-              <button className="bg-black text-white rounded-full px-3 ">
+              <button
+                onClick={() => handleSeeMoreClick(product.id)}
+                className="bg-black text-white rounded-full px-2 h-6"
+              >
                 See More
               </button>
             </div>
@@ -46,4 +60,3 @@ const Yearendsale = () => {
 };
 
 export default Yearendsale;
-

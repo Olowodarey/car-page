@@ -37,7 +37,7 @@ const Navbar = () => {
                   About
                 </NavLink>
                 <NavLink
-                  to="/hot-product"
+                  to="/product"
                   className="hover:bg-blue-300 rounded-md p-1"
                 >
                   Hot Product
@@ -100,7 +100,7 @@ const Navbar = () => {
               <div className="flex flex-col justify-center items-center space-y-2">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
-                <NavLink to="/hot-product">Hot Product</NavLink>
+                <NavLink to="/product">Hot Product</NavLink>
                 <NavLink to="/spare-part">Spare Part</NavLink>
                 <NavLink to="/appointment">Appointment</NavLink>
                 <NavLink to="/contact-us">Contact Us</NavLink>

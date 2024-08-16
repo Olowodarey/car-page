@@ -1,6 +1,6 @@
 const Topheader = () => {
   return (
-    <div className="border-b bg-blue-500">
+    <div className="border-b bg-blue-700">
     <div className="mx-auto max-w-7xl lg:px-10  px-5 ">
       <div className="flex  items-center justify-between text-xs font-light  text-white sm:space-x-2 ">
         <div className="" >
