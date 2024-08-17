@@ -112,7 +112,7 @@ const Hero = () => {
                 automotive tuning!
               </p>
 
-              {showMore && (
+              {/* {showMore && ( */}
                 <>
                   <p className="text-xs lg:text-sm pt-1 lg:pt-10">
                     Our Automotive Technology course is our most popular
@@ -139,7 +139,7 @@ const Hero = () => {
                     today’s muscle cars.
                   </p>
                 </>
-              )}
+              {/* )} */}
 
               <button
                 onClick={() => setShowMore(!showMore)}

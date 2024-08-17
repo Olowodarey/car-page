@@ -3,9 +3,13 @@ import Topheader from "./Topheader";
 
 import { FaSearch } from "react-icons/fa";
 import { Menu, X, ShoppingCart, CircleUserRound } from "lucide-react";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import logo2 from "../assets/images/logo2.jpg";
 import { useState } from "react";
+import LoginModal from "./Login";
+import Register from "./Register"
+import AuthModal from "./Login"
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -13,6 +17,11 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div>
       <Topheader />
@@ -49,7 +58,7 @@ const Navbar = () => {
                   Spare Part
                 </NavLink>
                 <NavLink
-                  to="/appointment"
+                  to="appointment"
                   className="hover:bg-blue-300 rounded-md p-1"
                 >
                   Appointment
@@ -72,15 +81,18 @@ const Navbar = () => {
                 />
                 <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
               </div>
-              <NavLink to="/cart " className="hover:bg-blue-300 rounded-md p-1">
-                <ShoppingCart />
+              <NavLink to="/cart " className="hover:bg-blue-300 rounded-md ">
+                <ShoppingCartIcon fontSize="medium" />
               </NavLink>
-              <NavLink
-                to="/profile"
-                className="hover:bg-blue-300 rounded-md p-1"
-              >
-                <CircleUserRound />
-              </NavLink>
+
+              <div className="hover:bg-blue-300 rounded-md ">
+                <AuthModal
+                  open={open}
+                  handleOpen={handleOpen}
+                  handleClose={handleClose}
+                />
+
+              </div>
 
               <div className="lg:hidden   items-center">
                 <button onClick={toggleNavbar}>

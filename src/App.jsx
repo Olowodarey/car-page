@@ -8,6 +8,8 @@ import MainLayout from "./layouts/MainLayout";
 import Homepage from "./pages/Homepage";
 import Productspage from "./pages/Productspage";
 import ProductDetails from "./pages/ProductDetails"
+import  Appointmentpage from "./pages/Appointmentpage"
+import  LoginPage from "./pages/Loginpage"
 
 
 const App =() => {
@@ -19,6 +21,8 @@ const App =() => {
              <Route index element={<Homepage  />} />
              <Route path="/product" element={<Productspage  />} />
              <Route path="/ProductDetails/:id" element={<ProductDetails  />} />
+             <Route path="/appointment" element={< Appointmentpage  />} />
+             <Route path="/LoginPage" element={<  LoginPage  />} />
 
         </Route>
      
