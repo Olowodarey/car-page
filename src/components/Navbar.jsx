@@ -2,14 +2,13 @@ import { NavLink } from "react-router-dom";
 import Topheader from "./Topheader";
 
 import { FaSearch } from "react-icons/fa";
-import { Menu, X, ShoppingCart, CircleUserRound } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import logo2 from "../assets/images/logo2.jpg";
 import { useState } from "react";
-import LoginModal from "./Login";
-import Register from "./Register"
-import AuthModal from "./Login"
+
+import AuthModal from "./Login";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -91,7 +90,6 @@ const Navbar = () => {
                   handleOpen={handleOpen}
                   handleClose={handleClose}
                 />
-
               </div>
 
               <div className="lg:hidden   items-center">
