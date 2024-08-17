@@ -4,7 +4,7 @@
             "item": "Mp concepts full replacement Decklid Panel; Gloss Black",
             "price": "$89.99",
             "type": "car",
-            "imageUrl": "/public/car1.png",
+            "imageUrl": "src/assets/images/car1.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -17,7 +17,7 @@
             "item": "Gt500 Track Pack Style Rear Spoiler; Gloss Carbon Fiber",
             "price": "$184.99",
             "type": "car",
-            "imageUrl": "/public/car2.png",
+            "imageUrl": "src/assets/images/car2.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -31,7 +31,7 @@
             "item": "MMD v-series Rear spoiler; Pre-painted",
             "price": "$199.00",
             "type": "car",
-            "imageUrl": "/public/car3.png",
+            "imageUrl": "src/assets/images/car3.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -45,7 +45,7 @@
             "item": "MP Concepts Performance Pack Style Rear Spoiler; Primed",
             "price": "$239.99",
             "type": "car",
-            "imageUrl": "/public/car4.png",
+            "imageUrl": "src/assets/images/car4.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -59,7 +59,7 @@
             "item": "RTR Upper Grille with LED Accent Vent Lights",
             "price": "$589.99",
             "type": "car",
-            "imageUrl": "/public/car5.png",
+            "imageUrl": "src/assets/images/car5.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -73,7 +73,7 @@
             "item": "Ford Bullitt Lower Grille",
             "price": "$259.99",
             "type": "car",
-            "imageUrl": "/public/car6.png",
+            "imageUrl": "src/assets/images/car6.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -87,7 +87,7 @@
             "item": "JLT Cold Air Intake with Red Oiled Filter",
             "price": "$349.99",
             "type": "Intake",
-            "imageUrl": "/public/rough1.png",
+            "imageUrl": "src/assets/images/rough1.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -101,7 +101,7 @@
             "item": "JLT Cold Air Intake with Red Oiled Filter",
             "price": "$349.99",
             "type": "Intake",
-            "imageUrl": "/public/rough2.png",
+            "imageUrl": "src/assets/images/rough2.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -115,7 +115,7 @@
             "item": "JLT Cold Air Intake with Red Oiled Filter",
             "price": "$349.99",
             "type": "Intake",
-            "imageUrl": "/public/rough3.png",
+            "imageUrl": "src/assets/images/rough3.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -129,7 +129,7 @@
             "item": "2010 GT500 Style Chrome Wheel; 19x8.5",
             "price": "$289.99",
             "type": "Rim",
-            "imageUrl": "/public/rim8.png",
+            "imageUrl": "src/assets/images/rim8.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -143,7 +143,7 @@
             "item": "GT350R Style Gloss Black Wheel; 19x8.5",
             "price": "$229.99",
             "type": "Rim",
-            "imageUrl": "/public/rim8.png",
+            "imageUrl": "src/assets/images/rim8.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -157,7 +157,7 @@
             "item": "Rovos Wheels Calvinia Charcoal Wheel; 19x8.5",
             "price": "$349.99",
             "type": "Rim",
-            "imageUrl": "/public/rim9.png",
+            "imageUrl": "src/assets/images/rim9.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -171,7 +171,7 @@
             "item": "Performance Pack Style Gloss Black Wheel; 19x8.5",
             "price": "$239.99",
             "type": "Rim",
-            "imageUrl": "/public/rim10.png",
+            "imageUrl": "src/assets/images/rim10.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
@@ -185,7 +185,7 @@
             "item": "JLT Cold Air Intake with Red Oiled Filter",
             "price": "$349.99",
             "type": "Intake",
-            "imageUrl": "/public/rough1.png",
+            "imageUrl": "src/assets/images/rough1.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
