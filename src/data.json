@@ -4,7 +4,7 @@
             "item": "Mp concepts full replacement Decklid Panel; Gloss Black",
             "price": "$89.99",
             "type": "car",
-            "imageUrl": "/src/assets/images/car1.png",
+            "imageUrl": "/public/exhust.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
