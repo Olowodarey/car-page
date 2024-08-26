@@ -1,3 +1,6 @@
+ 
+ 
+ 
  [
         {
             "id": 1,
@@ -19,7 +22,7 @@
             "item": "Gt500 Track Pack Style Rear Spoiler; Gloss Carbon Fiber",
             "price": "$184.99",
             "type": "car",
-            "imageUrl": "/src/assets/images/car2.png",
+            "imageUrl": "../src/assets/images/car2.png",
             "details": [
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "Aenean commodo ligula eget dolor. Aenean massa.",
