@@ -1,13 +1,19 @@
-
 import data from "../data.json";
 import { useNavigate } from "react-router-dom";
+import Card from "../components/Card"
 
 const Product = () => {
   const navigate = useNavigate();
+  
 
   const limitedProducts = data.slice(0, 12);
-  const handleSeeMoreClick = (id) => {
-    navigate(`/ProductDetails/${id}`);
+
+
+
+
+
+  const handleSeeMoreClick = (slug) => {
+    navigate(`/products/${slug}`);
   };
 
   return (
@@ -18,32 +24,12 @@ const Product = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
         {limitedProducts.map((product) => (
-          <div
-            key={product.id}
-            className="border-2 border-gray-500 rounded-2xl p-4"
-          >
-            <div className="">
-              <img
-                src={product.imageUrl}
-                alt={product.item}
-                className="w-[250px] h-50 object-cover mb-4 rounded-md"
-              />
-            </div>
-
-            <div className="  h-[40px] ">
-              <h3 className="text-sm font-semibold">{product.item}</h3>
-            </div>
-
-            <div className="p-2  px-1 flex gap-4 justify-between items-center">
-              <p className=" p-2 text-lg text-blue-700 font-bold">{product.price}</p>
-              <button
-                onClick={() => handleSeeMoreClick(product.id)}
-                className="bg-black text-white rounded-full px-2 h-6"
-              >
-                See More
-              </button>
-            </div>
-          </div>
+              <Card
+              key={product.id} 
+              product={product}
+              onSeeMoreClick={handleSeeMoreClick}
+            />
+        
         ))}
       </div>
     </div>

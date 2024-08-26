@@ -5,12 +5,32 @@ import { FaSearch } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-import logo2 from "../assets/images/logo2.jpg";
-import { useState } from "react";
 
+import logo2 from "../assets/images/logo2.jpg";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux' 
+import { toggleStatusTab }  from "../stores/Cartstore"
 import AuthModal from "./Login";
+import Carttap from "./Carttap"
+
 
 const Navbar = () => {
+
+  const [totalQuantity, setTotalQuantity] = useState(0);
+  const carts = useSelector(store => store.cart.items);
+  const dispatch = useDispatch();
+  useEffect(() => {
+      let total = 0;
+      carts.forEach(item => total += item.quantity);
+      setTotalQuantity(total);
+  }, [carts])
+
+
+  const handleOpenTabCart = () => {
+    dispatch(toggleStatusTab());
+  };
+
+
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -20,6 +40,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+
+  
+
+
+
+
 
   return (
     <div>
@@ -80,9 +107,13 @@ const Navbar = () => {
                 />
                 <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
               </div>
-              <NavLink to="/cart " className="hover:bg-blue-300 rounded-md ">
-                <ShoppingCartIcon fontSize="medium" />
-              </NavLink>
+
+
+          <button>
+          <ShoppingCartIcon  onClick={handleOpenTabCart} fontSize="medium" />
+              <span className="absolute  bg-red-500 text-white text-sm
+              w-5 h-4 rounded-full flex justify-center items-center ">{totalQuantity}</span>
+          </button>
 
               <div className="hover:bg-blue-300 rounded-md ">
                 <AuthModal
