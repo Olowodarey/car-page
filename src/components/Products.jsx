@@ -1,4 +1,4 @@
-import data from "../data.json";
+import data from "../data";
 import { useNavigate } from "react-router-dom";
 import Card from "../components/Card"
 

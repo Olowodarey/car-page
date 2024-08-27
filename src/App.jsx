@@ -10,6 +10,7 @@ import Productspage from "./pages/Productspage";
 import ProductDetails from "./pages/ProductDetails"
 import  Appointmentpage from "./pages/Appointmentpage"
 import  LoginPage from "./pages/Loginpage"
+import Checkout from "./pages/Checkout";
 
 
 const App =() => {
@@ -23,6 +24,7 @@ const App =() => {
              <Route path="/ProductDetails/:slug" element={<ProductDetails  />} />
              <Route path="/appointment" element={< Appointmentpage  />} />
              <Route path="/LoginPage" element={<  LoginPage  />} />
+             <Route path="/checkout" element={<  Checkout  />} />
 
         </Route>
      

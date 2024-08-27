@@ -36,10 +36,28 @@ const cartSlice = createSlice({
             }else{
                 state.statusTab = false;
             }
-        }
+        },
+
+        removeItem(state, action) {
+            const productId = action.payload;
+            state.items = state.items.filter(item => item.productId !== productId);
+
+            localStorage.setItem("carts", JSON.stringify(state.items)); // Save updated cart to localStorage
+        },
+
+        
     }
     
 });
 
-export const { addToCart, changeQuantity, toggleStatusTab } = cartSlice.actions;
+export const selectCartTotal = (state) => {
+    return state.cart.items.reduce((total, item) => {
+
+        const price = typeof item.price === 'string' ? parseFloat(item.price.replace('$', '')) : item.price;
+        return total + (price * item.quantity);
+    }, 0).toFixed(2);
+};
+
+
+export const { addToCart, changeQuantity, toggleStatusTab, removeItem } = cartSlice.actions;
 export default cartSlice.reducer;
